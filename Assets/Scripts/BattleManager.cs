@@ -10,6 +10,10 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        
+    }
+
+    public void Attack()
+    {
+        BattleManager.Instance.Attack();
     }
 }

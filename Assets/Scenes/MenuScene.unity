@@ -274,16 +274,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   heroesList:
-  - {fileID: 4424820938034660398, guid: dfb15f620b3bf4e7e8f1d39d99e53c5f, type: 3}
-  - {fileID: -4906237689242876219, guid: 90eb07084d32b4420800f821606a356e, type: 3}
-  - {fileID: -8056175413090942227, guid: 299fc79d93ca041fda0ba84430601fa4, type: 3}
-  - {fileID: -6896236862705758785, guid: 147edd77aa85c49a099d42e64b1828b6, type: 3}
-  - {fileID: -8041172771380974631, guid: 24585c50c536444a3812bd8204d004fa, type: 3}
-  - {fileID: 6648206047418869100, guid: 0bbdc4d08616341738c25f7e16f4c3b8, type: 3}
-  - {fileID: 8331250997850988972, guid: fe767c0967a0c4312b31196057ddfecd, type: 3}
-  - {fileID: -6819589295028164477, guid: a3c8a65ce4b814cd686413abd277502a, type: 3}
-  - {fileID: 8112893602320017619, guid: 9923113bd18f74557bc54319bcda1301, type: 3}
-  - {fileID: -2961820109221278165, guid: bf104f3cb495e43ea9df5f5e3b183694, type: 3}
+  - {fileID: 6095891673400952815, guid: d11b2f0051bac4979b1960c6c7136a0c, type: 3}
+  - {fileID: 1754114788052401824, guid: b02fb572f101f4698bcab6ff76e91248, type: 3}
+  - {fileID: -367903801613779763, guid: 43e6b4ff4303a4e3e9ae5c62465b66d1, type: 3}
+  - {fileID: -367903801613779763, guid: 98b747b4ada104bcb8daad4938faeeb4, type: 3}
+  - {fileID: -367903801613779763, guid: ffd5145bfe8194d468cc403bb0d8d653, type: 3}
+  - {fileID: -367903801613779763, guid: eac6a558d094740fea30e8790b9f7fb2, type: 3}
+  - {fileID: -367903801613779763, guid: 88dccd8f5e2154b82b2d97e2246c32d5, type: 3}
+  - {fileID: -367903801613779763, guid: 3e1b30711fd5e4ac3995bb7121e63e46, type: 3}
+  - {fileID: -367903801613779763, guid: 3de4cf138a24940cc90ee540b30e6924, type: 3}
+  - {fileID: -367903801613779763, guid: f0c1e7359d1ac47e5abf0bc3282e40eb, type: 3}
   selectedHeroesList: []
 --- !u!4 &1361049509
 Transform:

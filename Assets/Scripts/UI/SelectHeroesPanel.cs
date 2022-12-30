@@ -8,18 +8,20 @@ namespace UI
 {
     public class SelectHeroesPanel : MonoBehaviour
     {
+        public static SelectHeroesPanel Instance;
         public Button playBattleButton;
 
         [Header("Hero Selection Button")] 
         [SerializeField]
-        private HeroSelectionButton heroSelectionButton;
+        public HeroSelectionButton heroSelectionButton;
         [SerializeField]
-        private RectTransform heroesParent;
+        public RectTransform heroesParent;
         [SerializeField]
-        private List<HeroSelectionButton> heroSelectionButtonList;
+        public List<HeroSelectionButton> heroSelectionButtonList;
         
         private void Awake()
         {
+            Instance = this;
             heroSelectionButtonList = new List<HeroSelectionButton>();
         }
 

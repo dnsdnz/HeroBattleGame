@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 namespace UI
@@ -9,33 +10,28 @@ namespace UI
     {
         [SerializeField]
         private RectTransform playerHeroesParent;
-        [SerializeField]
-        private RectTransform enemyHeroParent;
-        
-        [Header("Hero Attack Button")] 
+        [Header("Hero")] 
         [SerializeField]
         private HeroAttackButton heroAttackButton;
         [SerializeField]
         private List<HeroAttackButton> heroAttackButtonList;
-
-        public List<HeroProperties> playerHeroesList;
         
+        [Header("Enemy")] 
+        [SerializeField]
+        public Text enemyName;
         public HeroProperties enemyHero;
-        public HeroAttackButton enemy;
+        
+        public List<HeroProperties> playerHeroesList;
         private void Awake()
         {
             heroAttackButtonList = new List<HeroAttackButton>();
-            
             playerHeroesList = GameManager.Instance.selectedHeroesList;
-                    
-            enemyHero = GameManager.Instance.heroesList[Random.Range(0, heroAttackButtonList.Count)];
-            
-            Instantiate(enemy, enemyHeroParent);
+            enemyHero = GameManager.Instance.heroesList[Random.Range(0, GameManager.Instance.heroesList.Count)];
         }
         
         private void Start()
         {
-            enemy.heroName.text = enemyHero.heroName;
+            enemyName.text = enemyHero.heroName;
 
             SetAttackButtons();
         }
