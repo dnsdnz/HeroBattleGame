@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace UI
 {
-    public class HeroSelectionButton : MonoBehaviour
+    public class HeroSelectionButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField] private string HeroId;
 
@@ -12,11 +13,21 @@ namespace UI
 
         [SerializeField] private Button selectButton;
 
+        [Header("Pop Up Panel")]
+        [SerializeField] private RectTransform popUpArea;
+        [SerializeField] private Text popUpNameText;
+        [SerializeField] private Text popUpLevelText;
+        [SerializeField] private Text popUpAttackText;
+        [SerializeField] private Text popUpExperienceText;
+
         public bool buttonStatus;
+
+        public HeroProperties currentHeroProperties;
         private void Start()
         {
             heroName.text = HeroId;
             buttonStatus = false;
+            currentHeroProperties = GameManager.Instance.heroesList.Find(h => h.heroName == HeroId);
         }
         public void Set(string heroId)
         {
@@ -35,10 +46,10 @@ namespace UI
                 heroImage.color = Color.white;
                 buttonStatus = false;
                 
-                var hero = GameManager.Instance.heroesList.Find(h => h.heroName == heroId);
-                if (hero)
+                currentHeroProperties = GameManager.Instance.heroesList.Find(h => h.heroName == heroId);
+                if (currentHeroProperties)
                 {
-                    GameManager.Instance.selectedHeroesList.Remove(hero);
+                    GameManager.Instance.selectedHeroesList.Remove(currentHeroProperties);
                 }
             }
             else
@@ -48,10 +59,26 @@ namespace UI
                     heroImage.color = Color.red;
                     buttonStatus = true;
                     
-                    var hero = GameManager.Instance.heroesList.Find(h => h.heroName == heroId);
-                    GameManager.Instance.selectedHeroesList.Add(hero);
+                    if (currentHeroProperties)
+                    {
+                        GameManager.Instance.selectedHeroesList.Add(currentHeroProperties);
+                    }
                 }
             }
+        }
+
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            popUpArea.gameObject.SetActive(true);
+            popUpNameText.text = "Name:" + currentHeroProperties.heroName;
+            popUpLevelText.text = "Level:" + currentHeroProperties.level;
+            popUpAttackText.text = "Attack Power:" + currentHeroProperties.attackPower;
+            popUpExperienceText.text = "Experience:" + currentHeroProperties.experience;
+        }
+
+        public void OnPointerUp(PointerEventData eventData)
+        {
+            popUpArea.gameObject.SetActive(false);
         }
     }
 }

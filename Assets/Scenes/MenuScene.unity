@@ -146,6 +146,22 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2494567809016048453, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1900
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494567809016048453, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494567809016048453, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 2494567809016048453, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -24
+      objectReference: {fileID: 0}
     - target: {fileID: 2661419694811242908, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
       propertyPath: m_Name
       value: SelectHeroesPanel
@@ -153,6 +169,10 @@ PrefabInstance:
     - target: {fileID: 2661419694811242908, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752013896060635879, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_Vertical
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3649601844067659414, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
       propertyPath: m_Pivot.x
@@ -238,10 +258,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6822753973388947038, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_CellSize.x
+      value: 363.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822753973388947038, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_CellSize.y
+      value: 364.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6822753973388947038, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_Padding.m_Top
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956387539637173938, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_Transition
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6956387539637173938, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7462715177370802865, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
       propertyPath: heroSelectionButton
       value: 
       objectReference: {fileID: 8055297365283268540, guid: bfefd3151bd4b4058842291928076a91, type: 3}
+    - target: {fileID: 7608961333107015876, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b34ba4391f1464593a0c3f9f79ad5fe4, type: 3}
 --- !u!1 &1361049507

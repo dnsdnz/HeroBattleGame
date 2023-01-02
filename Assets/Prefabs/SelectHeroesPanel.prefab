@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playBattleButton: {fileID: 5152374050610844598}
-  heroSelectionButton: {fileID: 8055297365283268540, guid: dfb15f620b3bf4e7e8f1d39d99e53c5f, type: 3}
+  heroSelectionButton: {fileID: 8055297365283268540, guid: bfefd3151bd4b4058842291928076a91, type: 3}
   heroesParent: {fileID: 6772542080098531507}
   heroSelectionButtonList: []
 --- !u!1 &2988942765957952315
@@ -431,8 +431,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -81}
-  m_SizeDelta: {x: 1000, y: 900}
+  m_AnchoredPosition: {x: 13, y: -24}
+  m_SizeDelta: {x: 1900, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7160483107387485769
 CanvasRenderer:
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Content: {fileID: 6772542080098531507}
   m_Horizontal: 0
-  m_Vertical: 1
+  m_Vertical: 0
   m_MovementType: 1
   m_Elasticity: 0.1
   m_Inertia: 1
@@ -872,7 +872,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -932,7 +932,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6374969581366334662
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1011,7 +1011,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 0
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1108,12 +1108,12 @@ MonoBehaviour:
   m_Padding:
     m_Left: 30
     m_Right: 0
-    m_Top: 30
+    m_Top: 120
     m_Bottom: 0
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 275.1, y: 239.01}
+  m_CellSize: {x: 363.2, y: 364.5}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 0
   m_ConstraintCount: 2

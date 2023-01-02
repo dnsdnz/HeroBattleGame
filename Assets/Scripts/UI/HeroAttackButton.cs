@@ -12,7 +12,8 @@ public class HeroAttackButton : MonoBehaviour
     [SerializeField] private Slider heroHealth;
     
     [SerializeField] private Button attackButton;
-    
+
+    public bool isAttack; 
     private void Start()
     {
         heroName.text = HeroId;
@@ -24,12 +25,13 @@ public class HeroAttackButton : MonoBehaviour
 
         attackButton.onClick.AddListener(() =>
         {
+            this.GetComponent<RectTransform>().Translate(100,0,0);
             AttackButton(heroId);
         });
     }
 
     void AttackButton(string heroId)
     {
-        
+        isAttack = true;
     }
 }
