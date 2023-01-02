@@ -12,13 +12,14 @@ namespace UI
         public Button playBattleButton;
 
         [Header("Hero Selection Button")] 
-        [SerializeField]
         public HeroSelectionButton heroSelectionButton;
         [SerializeField]
-        public RectTransform heroesParent;
-        [SerializeField]
+        private RectTransform heroesParent;
         public List<HeroSelectionButton> heroSelectionButtonList;
-        
+
+        [Header("Warning Area")] 
+        [SerializeField] private GameObject warningPanel;
+        [SerializeField] private Button closeWarningButton;
         private void Awake()
         {
             Instance = this;
@@ -60,11 +61,16 @@ namespace UI
         private void OnEnable()
         {
             playBattleButton.onClick.AddListener(PlayBattle);
+            closeWarningButton.onClick.AddListener(() =>
+            {
+                warningPanel.SetActive(false);
+            });
         }
 
         private void OnDisable()
         {
             playBattleButton.onClick.RemoveAllListeners();
+            closeWarningButton.onClick.RemoveAllListeners();
         }
         
         private void PlayBattle()
@@ -75,8 +81,7 @@ namespace UI
             }
             else
             {
-                Debug.Log("Choose 3 character");
-                //TODO open error panel   
+               warningPanel.SetActive(true);
             }
         }
     }

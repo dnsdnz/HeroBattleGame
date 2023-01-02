@@ -1,19 +1,19 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 public class BattleManager : MonoBehaviour
 {
     public static BattleManager Instance;
-
+    [SerializeField] public RectTransform gameCompletedPanel;
+    
     private void Awake()
     {
         Instance = this;
     }
 
-    public void Attack()
+    public void GameCompleted()
     {
-        BattleManager.Instance.Attack();
+        gameCompletedPanel.gameObject.SetActive(true);
     }
 }

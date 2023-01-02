@@ -49,3 +49,4 @@ MonoBehaviour:
   attackPower: 1
   experience: 1
   level: 1
+  isOwned: 1

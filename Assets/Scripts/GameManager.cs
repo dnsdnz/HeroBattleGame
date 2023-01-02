@@ -8,7 +8,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     
     public List<HeroProperties> heroesList;
-
     public List<HeroProperties> selectedHeroesList;
 
     private void Awake()
@@ -16,8 +15,7 @@ public class GameManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(this);
     }
-
-
+    
     //TODO save progress in every session
     public void SavePlayerData()
     {

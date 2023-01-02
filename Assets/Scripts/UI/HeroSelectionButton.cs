@@ -9,11 +9,12 @@ namespace UI
         [SerializeField] private string HeroId;
 
         [SerializeField] private Text heroName;
-        [SerializeField] private Image heroImage;
+        [SerializeField] private Image heroActiveImage;
+        [SerializeField] private Image heroPassiveImage;
 
         [SerializeField] private Button selectButton;
 
-        [Header("Pop Up Panel")]
+        [Header("Info Pop Up")]
         [SerializeField] private RectTransform popUpArea;
         [SerializeField] private Text popUpNameText;
         [SerializeField] private Text popUpLevelText;
@@ -28,6 +29,12 @@ namespace UI
             heroName.text = HeroId;
             buttonStatus = false;
             currentHeroProperties = GameManager.Instance.heroesList.Find(h => h.heroName == HeroId);
+            if (!currentHeroProperties.isOwned)
+            {
+                heroActiveImage.gameObject.SetActive(false);
+                heroPassiveImage.gameObject.SetActive(true);
+                selectButton.enabled = false;
+            }
         }
         public void Set(string heroId)
         {
@@ -43,7 +50,7 @@ namespace UI
         {
             if (buttonStatus) //selected
             {
-                heroImage.color = Color.white;
+                heroActiveImage.color = Color.white;
                 buttonStatus = false;
                 
                 currentHeroProperties = GameManager.Instance.heroesList.Find(h => h.heroName == heroId);
@@ -56,7 +63,7 @@ namespace UI
             {
                 if (GameManager.Instance.selectedHeroesList.Count < 3)
                 {
-                    heroImage.color = Color.red;
+                    heroActiveImage.color = Color.red;
                     buttonStatus = true;
                     
                     if (currentHeroProperties)
@@ -67,7 +74,7 @@ namespace UI
             }
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData eventData) //display info popup after hold for 3 sec
         {
             popUpArea.gameObject.SetActive(true);
             popUpNameText.text = "Name:" + currentHeroProperties.heroName;

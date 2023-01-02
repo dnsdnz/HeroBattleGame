@@ -9,4 +9,6 @@ public class HeroProperties : MonoBehaviour
     public float attackPower;
     public int experience;
     public int level;
+    
+    public bool isOwned;
 }
